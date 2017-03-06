@@ -11,25 +11,25 @@
 
 $(document).ready(function() {
   // Видеогалерея
-  // var videoSliderItems = $('.video-gallery .slider .item');
-  //
-  // if (videoSliderItems.length > 4) {
-  //   $('.video-gallery .slider').append('<div class="controls clearfix"><div class="left"></div><div class="right"></div></div>');
-  //
-  //   videoSliderItems.epSlider({
-  //     leftControl  : '.video-gallery .slider .controls .left',
-  //     rightControl : '.video-gallery .slider .controls .right',
-  //     displayCount : 4,
-  //     wrapperID    : 'ep-slider',
-  //     slideSize    : 220
-  //   });
-  // }
+  var videoSliderItems = $('.video-gallery .slider .item');
 
-  // $('.video-gallery .item').click(function() {
-  //   loadVideo($(this).attr("data-id"));
-  //   $('.video-gallery .item.selected').removeClass('selected');
-  //   $(this).addClass('selected');
-  // }).eq(0).click();
+  if (videoSliderItems.length > 4) {
+    $('.video-gallery .slider').append('<div class="controls clearfix"><div class="left"></div><div class="right"></div></div>');
+
+    videoSliderItems.epSlider({
+      leftControl  : '.video-gallery .slider .controls .left',
+      rightControl : '.video-gallery .slider .controls .right',
+      displayCount : 4,
+      wrapperID    : 'ep-slider',
+      slideSize    : 220
+    });
+  }
+
+  $('.video-gallery .item').click(function() {
+    loadVideo($(this).attr("data-id"));
+    $('.video-gallery .item.selected').removeClass('selected');
+    $(this).addClass('selected');
+  }).eq(0).click();
 
   // Фотогалерея
   //
